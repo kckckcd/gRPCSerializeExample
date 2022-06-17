@@ -1,0 +1,14 @@
+syntax = "proto3";
+package test;
+
+service test{
+  rpc hello(request) returns (empty) {}
+}
+
+message request{
+  bytes data = 1;  // 这里的data按照data.proto里规定的结构存储
+}
+
+message empty{
+
+}
